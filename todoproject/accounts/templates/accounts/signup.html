@@ -1,0 +1,15 @@
+{% extends 'base.html'%}
+{% block title %} signup {% endblock %}
+{% block content %}
+<form method="POST">
+    {%csrf_token%}
+    {{form}}
+    <br>
+
+    <div class="container-login ">
+
+    <!-- <button type="submit">signup</button> -->
+    <button class=" btn  btn-login button-signup" type="submit">signup</button>
+</div>
+</form>
+{% endblock %}

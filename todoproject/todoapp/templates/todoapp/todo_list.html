@@ -1,0 +1,95 @@
+{% extends 'base.html'%}
+{% block title %} todo list {% endblock %}
+{% block content %}
+{% load static %}
+<!-- <link rel="stylesheet" type="text/css" href="{% static '/todoapp/style.css'%}"> -->
+<!-- <link rel="stylesheet" href="{% static 'css/style.css'%}"> -->
+<main>
+    <div class="bg3">
+
+
+<div class="list-container">
+    {% if todo_list_len == 0 %}
+    <div>
+        <h3> Nothing is here ...</h3>
+        <a href="{% url 'todoapp:todo_item_create'%}"> You can Add jobs todo from here :)</a>
+    </div>
+    {% else %}
+    <div class="todo-list-container">
+        <form method="POST" action=" {% url 'todoapp:todo_list'%}" id="todo-list-form">
+            <div class="todo-list">
+
+                <ul class="list-group">
+                    {% for todoitem in todolist %}
+
+                    <li class="list-group-item todo-item" id="todo-item-l">
+                        <div class="todo-item-content ">
+                            {% if todoitem.checked %}
+                            <input class="check-input form-check-input job-done-input " type="checkbox" name="checked"
+                                checked value="{{todoitem.id}}" aria-label="...">
+                            <div class="job-done-text job-text">
+
+                                <h6>{{todoitem.work}}</h6>
+                                {% if todoitem.date != None%}
+                                <p>{{todoitem.date}}</p>
+                                {% endif %}
+                            </div>
+                            {% else %}
+                            <input class="check-input form-check-input me-1" type="checkbox" name="checked"
+                                value="{{todoitem.id}}" aria-label="...">
+
+                            <div class="job-undone-text job-text">
+                                <h6>{{todoitem.work}}</h6>
+                                {% if todoitem.date != None%}
+                                <p>{{todoitem.date}}</p>
+                                {% endif %}
+
+                            </div>
+                            {% endif %}
+                        </div>
+                        <div class="todo-item-action">
+                            <a class="btn-danger btn " href="{% url 'todoapp:todo_item_delete' todoitem.id %}">
+                                <i class="bi bi-trash"></i></a>
+
+
+
+                        </div>
+
+                    </li>
+
+                    {% endfor%}
+                </ul>
+            </div>
+            {% csrf_token %}
+            <div class="add-btn">
+            <!-- <button class="btn btn-link-c" id="print_paper"><i class="bi bi-printer"></i></button> -->
+            <!-- <button class="btn btn-link" ><i class="bi bi-file-earmark-plus-fill"></i></button> -->
+            <a class="btn btn-link-c" href="/create"><i class="bi bi-file-earmark-plus-fill"></i></a>
+        </div>
+        </form>
+
+    </div>
+
+    {% endif %}
+
+
+</div>
+<script>
+    let check_input = document.getElementsByName('checked')
+    let form = document.getElementById('todo-list-form')
+    let print_btn = document.getElementById('print_paper')
+
+    check_input.forEach(element => {
+        element.addEventListener('click', function () {
+            form.submit()
+        })
+    })
+    print_btn.addEventListener('click', function () {
+        print()
+    })
+
+
+</script>
+</div>
+</main>
+{% endblock %}

@@ -1,0 +1,388 @@
+*,
+::before,
+::after {
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+}
+
+.list-container {
+    display: flex;
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+    min-height: 90vh;
+    /* background-color: #138944; */
+
+}
+
+.todo-list-container {
+    width: 100%;
+    /* background-color: #132789; */
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+}
+
+.add-btn {
+    direction: rtl;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.todo-list {
+    margin-top: 20px;
+    height: 400px;
+    overflow: auto;
+
+    /* overflow-y: scroll; */
+
+    /* background-color: #88a326;  */
+}
+
+/* .todo-list{
+position: absolute !important;
+  width: 100% !important;
+  margin-top: 10px !important;
+  margin-bottom: 10px !important;
+  overflow-y: hidden !important;
+} */
+
+.todo-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* background-color: #c8c6c3; */
+    background-color: rgba(255, 255, 255, 0.3);
+
+}
+
+/* #todo-item-l{
+    opacity: 0.9;
+} */
+.btn-danger {
+    background-color: #b76f2200;
+    border-color: #ad9d8a00;
+    color: #c21457;
+
+}
+
+.btn-danger:hover {
+    background-color: transparent;
+    border-color: transparent;
+    color: rgb(158, 117, 81);
+}
+
+
+
+.btn-danger:focus , .btn-danger:active{
+    background-color:transparent;
+    border-color: transparent;
+    color: #c21457;
+    box-shadow: none !important;
+    border: none;
+    outline:0 !important;}
+
+
+.todo-item-content {
+    display: flex;
+    min-height: 7vh;
+    /* background-color: #40c040; */
+}
+
+.todo-item-content input {
+
+    color: aqua;
+
+}
+
+.job-text h6 {
+    font-size: 17px;
+    margin: 1px 0;
+    margin-left: 40px;
+}
+
+.job-text p {
+    font-size: 11px;
+    margin: 1px 0;
+    margin-left: 40px;
+}
+
+.job-done-text {
+    text-decoration: line-through 1px;
+    font-weight: normal;
+    color: #588b7d;
+}
+
+/* .job-done-input:checked {
+
+    background-color: #125a53;
+} */
+
+.check-input:checked {
+    background-color: #098183;
+    border-color: #23626e;
+}
+
+.todo-item-action {
+    display: flex;
+}
+
+.todo-item-action a {
+    margin-right: 5px;
+}
+
+.create-form-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-width: 300px;
+    width: 70%;
+    padding-top: 30px;
+
+}
+
+.create-todo-form {
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.input-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.helper-text {
+    font-size: 13px;
+    color: #919191;
+}
+
+/* .bg2{
+    height: 100%;
+    width: 100%;
+    background-color: hotpink;
+    clip-path: polygon(61% 0, 100% 0%, 50% 100%, 0% 100%);
+    position: absolute;
+} */
+.bg2 {
+    /* background: rgb(23, 123, 111); */
+    background: linear-gradient(220deg, rgb(36, 130, 119) 0%, rgb(109, 231, 212) 35%, rgb(135, 197, 209) 100%);
+
+    /* background: #2f2328; */
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.bg3 {
+    /* background: rgb(108, 23, 123); */
+    /* clip-path: polygon(100% 0, 100% 100%, 75% 100%, 0 56%, 0 0); */
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-link-c {
+
+    color: #04571b;
+    font-size: 26px;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.btn-link-c :hover {
+
+    color: #9b5709;
+}
+.btn-link-c:focus , .btn-link-c:active{
+    background-color:transparent;
+    border-color: transparent;
+    box-shadow: none !important;
+    border: none;
+    outline:0 !important;}
+.btn-primary-b {
+    background-color: #0d706f;
+    color: #faf8f6;
+    border-color: #23616e62;
+    height: 40px;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+input[type=text],
+input[type=password] {
+    width: 70%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+
+
+}
+
+
+.btn:focus {
+    box-shadow: none;
+    outline:0 !important;}
+
+.btn:active {
+    outline: none;
+    border: none;
+} 
+
+
+.btn-login {
+    background-color: #0d706f;
+    color: #faf8f6;
+    border-color: #6d6e2362;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 60%;
+
+}
+
+.button-signup {
+    background-color: #0e2a2a;
+    width: 100%;
+}
+
+.btn:hover {
+    opacity: 0.8;
+    color: #aa9404;
+}
+
+
+.cancelbtn {
+    width: auto;
+    padding: 10px 18px;
+    background-color: #f44336;
+}
+
+.imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+}
+
+img.avatar {
+    width: 40%;
+    border-radius: 50%;
+}
+
+.container-login {
+    padding: 16px;
+    text-align: center;
+
+}
+
+span.psw {
+    float: right;
+    padding-top: 16px;
+}
+
+.topnav {
+    overflow: hidden;
+    background-color: rgb(60, 155, 149);
+}
+
+.topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.topnav a:hover {
+    background-color: rgb(37, 86, 74);
+
+}
+
+.topnav a.active {
+    background-color: #04AA6D;
+    color: white;
+}
+
+.topnav-right {
+    float: right;
+}
+
+/* .nav-item-login{
+    direction: rtl;
+    float:right;
+    background-color: #570444;
+}
+.navbar-nav{
+    direction: rtl;
+    background-color: #04571b;
+    float:right;
+}
+.navbar{
+    background-color: #505704;
+    color: #098183;
+}
+.navbarNav{
+    color: rgb(103, 20, 20);
+    background-color: #c21457;
+} */
+/* .box {
+    max-width: 400px;
+    margin: 50px auto;
+    background: white;
+    border-radius: 5px;
+    box-shadow: 5px 5px 15px -5px rgba(0, 0, 0, 0.3);
+  }
+  
+  #heading {
+    background-color: #a4cddd;
+    text-align: center;
+  }
+  html {
+    background-color: #E4E9FD;
+    background-image: -webkit-linear-gradient(65deg, #a8d8ea 50%, #e4f3f8 50%);
+    min-height: 1000px;
+    font-family: 'Raleway', sans-serif;;
+  }
+  footer {
+    color: white;
+    color: rgba(0, 0, 0, 0.5);
+    text-align: center;
+  }
+
+
+ */
+
+
+
+
+
+.container-test {
+    font-family: arial;
+    font-size: 24px;
+    margin: 25px;
+    width: 350px;
+    height: 200px;
+    outline: dashed 1px black;
+    /* Center vertically and horizontally */
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+
+.child-test {
+    width: 50px;
+    height: 50px;
+    background-color: red;
+}
