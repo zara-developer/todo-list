@@ -25,7 +25,7 @@ def todo_list_view(request):
             else:
                 TodoItem.objects.filter(id=todo_item.id).update(checked=False)
 
-        return redirect('/list')
+        return redirect('/')
 
     todo_list_len=len(query)
 

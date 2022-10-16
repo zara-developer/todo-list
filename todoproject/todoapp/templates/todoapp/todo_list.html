@@ -30,8 +30,8 @@
                             <div class="job-done-text job-text">
 
                                 <h6>{{todoitem.work}}</h6>
-                                {% if todoitem.date != None%}
-                                <p>{{todoitem.date}}</p>
+                                {% if todoitem.get_created_jalali != None%}
+                                <p>{{todoitem.get_created_jalali}}</p>
                                 {% endif %}
                             </div>
                             {% else %}
@@ -40,8 +40,8 @@
 
                             <div class="job-undone-text job-text">
                                 <h6>{{todoitem.work}}</h6>
-                                {% if todoitem.date != None%}
-                                <p>{{todoitem.date}}</p>
+                                {% if todoitem.get_created_jalali != None%}
+                                <p>{{todoitem.get_created_jalali}}</p>
                                 {% endif %}
 
                             </div>
